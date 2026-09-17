@@ -1,3 +1,48 @@
+# https://triplevroadrunnerssmashrepairs.com.au/robots.txt
+
+# --- Search & AI-search discovery crawlers (these send traffic — always allow) ---
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+
+# --- Model-training crawlers (allowed deliberately: we want models to know this business) ---
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+
+# --- Social link-preview crawlers (blocking these breaks shared-link cards) ---
+User-agent: facebookexternalhit
+Allow: /
+User-agent: Twitterbot
+Allow: /
+User-agent: LinkedInBot
+Allow: /
+User-agent: Slackbot-LinkExpanding
+Allow: /
+User-agent: WhatsApp
+Allow: /
+
+# --- Everything else ---
 User-agent: *
 Allow: /
 

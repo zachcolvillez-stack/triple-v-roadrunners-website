@@ -1,0 +1,85 @@
+/* Triple V Roadrunners — supplement to styles.css for the service / about / contact pages.
+   Reuses the existing tokens and classes; only adds patterns styles.css doesn't have. */
+
+/* breadcrumb */
+.crumb{font-size:.86rem;color:var(--muted);margin-bottom:14px}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--blue);text-decoration:underline}
+.crumb span{margin:0 7px;color:var(--border)}
+
+/* page hero (lighter than the homepage hero) */
+.page-hero{background:linear-gradient(180deg,var(--blue-soft),var(--bg));border-bottom:1px solid var(--border);padding:44px 0 46px}
+.page-hero h1{margin:0 0 14px;font-size:clamp(1.85rem,4.2vw,2.85rem);line-height:1.14;color:var(--ink);letter-spacing:-.015em}
+.page-hero .lead{font-size:1.08rem;color:var(--ink-soft);max-width:64ch;margin:0 0 22px}
+.page-hero .hero-actions{margin-bottom:22px}
+.trustline{display:flex;gap:8px 26px;flex-wrap:wrap;padding-top:18px;border-top:1px solid var(--border);font-size:.88rem;color:var(--ink-soft)}
+.trustline b{color:var(--ink);font-weight:700}
+
+/* prose */
+.prose{max-width:72ch}
+.prose h2{margin:0 0 14px;font-size:clamp(1.35rem,2.6vw,1.85rem);color:var(--ink);letter-spacing:-.01em}
+.prose h3{margin:26px 0 8px;font-size:1.1rem;color:var(--ink)}
+.prose p{color:var(--ink-soft);margin:0 0 14px;line-height:1.72}
+.prose p strong{color:var(--ink);font-weight:600}
+.prose ul{margin:0 0 16px;padding-left:0;list-style:none}
+.prose ul li{position:relative;padding-left:24px;margin-bottom:9px;color:var(--ink-soft);line-height:1.65}
+.prose ul li:before{content:"";position:absolute;left:0;top:.58em;width:8px;height:8px;border-radius:2px;background:var(--blue)}
+.prose ul li strong{color:var(--ink)}
+.prose a{color:var(--blue);font-weight:500}
+
+/* two-column layout with sticky aside */
+.page-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:44px;align-items:start}
+@media(max-width:920px){.page-grid{grid-template-columns:1fr;gap:30px}}
+.side{position:sticky;top:88px;background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-sm)}
+.side h3{margin:0 0 14px;font-size:1.05rem;color:var(--ink)}
+.side .row{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--border);font-size:.92rem}
+.side .row:last-of-type{border-bottom:0}
+.side .row span{color:var(--muted)}
+.side .row b{color:var(--ink);font-weight:600;text-align:right}
+.side .row b a{color:var(--blue);text-decoration:none}
+.side .btn{width:100%;justify-content:center;margin-top:12px}
+@media(max-width:920px){.side{position:static}}
+
+/* callout */
+.callout{background:var(--blue-soft);border-left:3px solid var(--blue);border-radius:0 var(--radius) var(--radius) 0;padding:16px 18px;margin:0 0 18px}
+.callout p{margin:0;color:var(--ink-soft)}
+.callout p strong{color:var(--blue-dark)}
+
+/* table */
+.table-wrap{overflow-x:auto;margin:0 0 18px}
+.table-wrap table{width:100%;border-collapse:collapse;font-size:.94rem;min-width:460px}
+.table-wrap th,.table-wrap td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--border)}
+.table-wrap th{background:var(--bg-soft);color:var(--ink);font-weight:700;font-size:.86rem}
+.table-wrap td{color:var(--ink-soft)}
+
+/* FAQ accordion */
+.faq-acc details{border-bottom:1px solid var(--border)}
+.faq-acc summary{cursor:pointer;padding:17px 0;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:16px;font-size:1.02rem}
+.faq-acc summary::-webkit-details-marker{display:none}
+.faq-acc summary:after{content:"+";color:var(--blue);font-size:1.3rem;line-height:1;flex-shrink:0;font-weight:400}
+.faq-acc details[open] summary:after{content:"\2013"}
+.faq-acc details > div{padding:0 0 17px}
+.faq-acc details > div p{margin:0;color:var(--ink-soft);line-height:1.72}
+
+/* related links */
+.linkrow{display:flex;gap:9px 12px;flex-wrap:wrap}
+.linkrow a{font-size:.9rem;font-weight:500;padding:9px 16px;border:1px solid var(--border);border-radius:999px;color:var(--ink-soft);text-decoration:none;background:var(--white);transition:border-color .2s,color .2s}
+.linkrow a:hover{border-color:var(--blue);color:var(--blue)}
+
+/* CTA band */
+.cta-band{background:var(--ink);color:var(--white);text-align:center;padding:52px 0}
+.cta-band h2{color:var(--white);margin:0 0 12px;font-size:clamp(1.4rem,2.8vw,2rem)}
+.cta-band p{color:#c3c9d6;max-width:56ch;margin:0 auto 22px}
+.cta-band .hero-actions{justify-content:center;display:flex;gap:12px;flex-wrap:wrap}
+.cta-band .btn-outline{border-color:rgba(255,255,255,.4);color:var(--white)}
+.cta-band .btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,.1);color:var(--white)}
+
+/* verification note (internal, not shown to visitors) */
+.verify-note{display:none}
+
+/* service-card headings are now links */
+.service-card h3 a{color:inherit;text-decoration:none}
+.service-card h3 a:hover{color:var(--blue)}
+
+/* page hero CTAs align left with the copy (homepage hero is centred) */
+.page-hero .hero-actions{justify-content:flex-start}
